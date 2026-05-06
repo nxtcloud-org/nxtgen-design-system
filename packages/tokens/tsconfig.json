@@ -1,8 +1,10 @@
 {
   "extends": "@nxtgen-org/tsconfig/base.json",
-  "include": ["dist/ts/**/*.ts", "build.mjs"],
+  "include": ["build.mjs"],
   "compilerOptions": {
     "outDir": "dist/ts",
-    "rootDir": "dist/ts"
+    "allowJs": true,
+    "checkJs": false,
+    "noEmit": true
   }
 }
