@@ -1,6 +1,6 @@
 {
   "name": "@nxtgen-org/icons",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "NxtGen icons — Lucide re-export + 자체 아이콘",
   "type": "module",
   "repository": {

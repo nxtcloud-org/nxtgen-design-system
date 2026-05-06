@@ -17,7 +17,7 @@
     "storybook": "turbo run dev --filter=docs",
     "changeset": "changeset",
     "version": "changeset version && bun install --lockfile-only",
-    "release": "turbo run build && changeset publish"
+    "release": "turbo run build && bun scripts/publish.mjs"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
