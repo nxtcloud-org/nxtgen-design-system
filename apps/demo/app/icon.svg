@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="orbitGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2A6BFF"></stop>
+      <stop offset="0.55" stop-color="#A855F7"></stop>
+      <stop offset="1" stop-color="#E94BD0"></stop>
+    </linearGradient>
+    <linearGradient id="sparkGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2A6BFF"></stop>
+      <stop offset="0.55" stop-color="#A855F7"></stop>
+      <stop offset="1" stop-color="#E94BD0"></stop>
+    </linearGradient>
+  </defs>
+  
+  <path d="M 100 22 A 78 78 0 0 0 22 100" stroke="url(#orbitGrad)" stroke-width="11" stroke-linecap="round" fill="none"></path>
+  
+  <path d="M 100 178 A 78 78 0 0 0 178 100" stroke="url(#orbitGrad)" stroke-width="11" stroke-linecap="round" fill="none"></path>
+  
+  <circle cx="158" cy="56" r="13" fill="#E94BD0"></circle>
+  
+  <circle cx="42" cy="144" r="11" fill="#2A6BFF"></circle>
+  
+  <path d="M100 50 C 102 78, 122 98, 150 100 C 122 102, 102 122, 100 150 C 98 122, 78 102, 50 100 C 78 98, 98 78, 100 50 Z" fill="url(#sparkGrad2)"></path>
+</svg>

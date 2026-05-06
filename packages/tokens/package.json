@@ -1,0 +1,41 @@
+{
+  "name": "@nxtgen-org/tokens",
+  "version": "0.1.0",
+  "description": "NxtGen design tokens — W3C DTCG → CSS / TS / Tailwind",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nxtcloud-org/nxtgen-design-system.git",
+    "directory": "packages/tokens"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "main": "./dist/ts/tokens.cjs",
+  "module": "./dist/ts/tokens.js",
+  "types": "./dist/ts/tokens.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/ts/tokens.d.ts",
+      "import": "./dist/ts/tokens.js",
+      "require": "./dist/ts/tokens.cjs"
+    },
+    "./css": "./dist/css/all.css",
+    "./css/light": "./dist/css/semantic-light.css",
+    "./css/dark": "./dist/css/semantic-dark.css",
+    "./tailwind": "./dist/tailwind/preset.cjs"
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "node ./build.mjs",
+    "dev": "node ./build.mjs --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@nxtgen-org/tsconfig": "workspace:*",
+    "style-dictionary": "4.3.0",
+    "typescript": "5.7.3"
+  }
+}

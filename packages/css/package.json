@@ -1,0 +1,28 @@
+{
+  "name": "@nxtgen-org/css",
+  "version": "0.1.0",
+  "description": "NxtGen global CSS — reset, fonts, theme",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nxtcloud-org/nxtgen-design-system.git",
+    "directory": "packages/css"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "exports": {
+    ".": "./src/index.css",
+    "./reset": "./src/reset.css",
+    "./fonts": "./src/fonts.css",
+    "./base": "./src/base.css"
+  },
+  "files": ["src"],
+  "scripts": {
+    "type-check": "echo 'css package: no types'"
+  },
+  "peerDependencies": {
+    "@nxtgen-org/tokens": "workspace:*"
+  }
+}

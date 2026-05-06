@@ -1,0 +1,74 @@
+name: Release
+
+# Publishes @nxtgen-org/* to public npm (registry.npmjs.org).
+#
+# Two flows:
+#   1) Open changesets PR (auto, on push to main with pending changesets)
+#   2) Publish on merge of that PR (auto, when versions are bumped + no pending changesets)
+#
+# Manual one-off publish: workflow_dispatch.
+#
+# First-publish bootstrap:
+#   - 첫 publish는 .changeset 비어 있어도 강제로 돌리고 싶을 때 workflow_dispatch 한번 트리거.
+#   - 이후부터는 changeset 추가 → main merge → 자동.
+#
+# Required secrets:
+#   - NPM_TOKEN: npmjs.com Automation token (https://www.npmjs.com/settings/<user>/tokens)
+#                Repo settings → Secrets and variables → Actions → New secret.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write       # changesets PR을 만들고 머지 후 태그/커밋 push
+  pull-requests: write  # changesets가 release PR 생성
+
+jobs:
+  release:
+    name: version + publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.20
+
+      # changesets/action 은 npm CLI를 쓰므로 노드도 필요
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+          scope: '@nxtgen'
+
+      - name: Install
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        run: bun run build
+
+      - name: Create Release PR or Publish
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          # bun publish 는 workspace:* 를 자동 치환하면서 publish 함
+          publish: bun run release
+          version: bun run version
+          commit: 'chore(release): version packages'
+          title: 'chore(release): version packages'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

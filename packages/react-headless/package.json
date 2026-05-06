@@ -1,0 +1,48 @@
+{
+  "name": "@nxtgen-org/react-headless",
+  "version": "0.1.0",
+  "description": "NxtGen — headless React primitives (behavior + a11y, no styles)",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nxtcloud-org/nxtgen-design-system.git",
+    "directory": "packages/react-headless"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "1.1.1"
+  },
+  "devDependencies": {
+    "@nxtgen-org/tsconfig": "workspace:*",
+    "@types/react": "19.0.2",
+    "@types/react-dom": "19.0.2",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "tsup": "8.3.5",
+    "typescript": "5.7.3"
+  }
+}

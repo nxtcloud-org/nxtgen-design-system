@@ -1,0 +1,17 @@
+/**
+ * NxtGen Global CSS — 한 번에 다 import.
+ *
+ * 사용:
+ *   import "@nxtgen-org/css";
+ *
+ * 개별 import:
+ *   import "@nxtgen-org/tokens/css";
+ *   import "@nxtgen-org/css/reset";
+ *   import "@nxtgen-org/css/fonts";
+ *   import "@nxtgen-org/css/base";
+ */
+
+@import "@nxtgen-org/tokens/css";
+@import "./reset.css";
+@import "./fonts.css";
+@import "./base.css";

@@ -1,0 +1,19 @@
+@import "@nxtgen-org/tokens/css";
+@import "@nxtgen-org/css/fonts";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* tokens 의존 글로벌 스타일은 utilities 뒤에 둬서 element selector가 utility를 안 이김 */
+@import "@nxtgen-org/css/base";
+
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

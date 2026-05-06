@@ -1,0 +1,101 @@
+{
+  "color": {
+    "blue": {
+      "50": { "$value": "#EEF3FF", "$type": "color" },
+      "100": { "$value": "#D9E4FF", "$type": "color" },
+      "200": { "$value": "#B3C9FF", "$type": "color" },
+      "300": { "$value": "#8DAEFF", "$type": "color" },
+      "400": { "$value": "#5887FF", "$type": "color" },
+      "500": { "$value": "#2560FF", "$type": "color" },
+      "600": { "$value": "#1E4DCC", "$type": "color" },
+      "700": { "$value": "#173A99", "$type": "color" },
+      "800": { "$value": "#0F2666", "$type": "color" },
+      "900": { "$value": "#081333", "$type": "color" }
+    },
+    "magenta": {
+      "50": { "$value": "#FDEEFA", "$type": "color" },
+      "100": { "$value": "#FBDDF5", "$type": "color" },
+      "200": { "$value": "#F6BAEB", "$type": "color" },
+      "300": { "$value": "#F198E0", "$type": "color" },
+      "400": { "$value": "#EC75D5", "$type": "color" },
+      "500": { "$value": "#E642CA", "$type": "color" },
+      "600": { "$value": "#B835A2", "$type": "color" },
+      "700": { "$value": "#8A2879", "$type": "color" },
+      "800": { "$value": "#5C1A51", "$type": "color" },
+      "900": { "$value": "#2E0D28", "$type": "color" }
+    },
+    "purple": {
+      "500": { "$value": "#A855F7", "$type": "color", "$description": "Gradient mid (signature)" }
+    },
+    "gray": {
+      "0": { "$value": "#FFFFFF", "$type": "color" },
+      "50": { "$value": "#FAFBFC", "$type": "color" },
+      "100": { "$value": "#F4F5F7", "$type": "color" },
+      "200": { "$value": "#E8EAEE", "$type": "color" },
+      "300": { "$value": "#D5D9E0", "$type": "color" },
+      "400": { "$value": "#A8AFBC", "$type": "color" },
+      "500": { "$value": "#767E8C", "$type": "color" },
+      "600": { "$value": "#525964", "$type": "color" },
+      "700": { "$value": "#353A42", "$type": "color" },
+      "800": { "$value": "#1F2329", "$type": "color" },
+      "900": { "$value": "#141619", "$type": "color" },
+      "950": { "$value": "#0A0B0D", "$type": "color" },
+      "1000": { "$value": "#000000", "$type": "color" }
+    },
+    "success": {
+      "50": { "$value": "#ECFDF5", "$type": "color" },
+      "100": { "$value": "#D1FAE5", "$type": "color" },
+      "200": { "$value": "#A7F3D0", "$type": "color" },
+      "300": { "$value": "#6EE7B7", "$type": "color" },
+      "400": { "$value": "#34D399", "$type": "color" },
+      "500": { "$value": "#10B981", "$type": "color" },
+      "600": { "$value": "#059669", "$type": "color" },
+      "700": { "$value": "#047857", "$type": "color" },
+      "800": { "$value": "#065F46", "$type": "color" },
+      "900": { "$value": "#064E3B", "$type": "color" }
+    },
+    "warning": {
+      "50": { "$value": "#FFFBEB", "$type": "color" },
+      "100": { "$value": "#FEF3C7", "$type": "color" },
+      "200": { "$value": "#FDE68A", "$type": "color" },
+      "300": { "$value": "#FCD34D", "$type": "color" },
+      "400": { "$value": "#FBBF24", "$type": "color" },
+      "500": { "$value": "#F59E0B", "$type": "color" },
+      "600": { "$value": "#D97706", "$type": "color" },
+      "700": { "$value": "#B45309", "$type": "color" },
+      "800": { "$value": "#92400E", "$type": "color" },
+      "900": { "$value": "#78350F", "$type": "color" }
+    },
+    "danger": {
+      "50": { "$value": "#FEF2F2", "$type": "color" },
+      "100": { "$value": "#FEE2E2", "$type": "color" },
+      "200": { "$value": "#FECACA", "$type": "color" },
+      "300": { "$value": "#FCA5A5", "$type": "color" },
+      "400": { "$value": "#F87171", "$type": "color" },
+      "500": { "$value": "#EF4444", "$type": "color" },
+      "600": { "$value": "#DC2626", "$type": "color" },
+      "700": { "$value": "#B91C1C", "$type": "color" },
+      "800": { "$value": "#991B1B", "$type": "color" },
+      "900": { "$value": "#7F1D1D", "$type": "color" }
+    },
+    "info": {
+      "50": { "$value": "#EFF6FF", "$type": "color" },
+      "100": { "$value": "#DBEAFE", "$type": "color" },
+      "200": { "$value": "#BFDBFE", "$type": "color" },
+      "300": { "$value": "#93C5FD", "$type": "color" },
+      "400": { "$value": "#60A5FA", "$type": "color" },
+      "500": { "$value": "#3B82F6", "$type": "color" },
+      "600": { "$value": "#2563EB", "$type": "color" },
+      "700": { "$value": "#1D4ED8", "$type": "color" },
+      "800": { "$value": "#1E40AF", "$type": "color" },
+      "900": { "$value": "#1E3A8A", "$type": "color" }
+    }
+  },
+  "gradient": {
+    "brand": {
+      "$value": "linear-gradient(135deg, #2560FF 0%, #A855F7 55%, #E642CA 100%)",
+      "$type": "gradient",
+      "$description": "NxtGen signature gradient"
+    }
+  }
+}

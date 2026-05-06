@@ -1,0 +1,12 @@
+/**
+ * NxtGen Fonts
+ *  - Pretendard Variable: 한글 본문 + UI
+ *  - Geist Sans / Mono:   영문 헤딩 + 코드
+ *
+ * Next.js 사용자는 가능하면 next/font로 로컬 호스팅을 권장 (CLS 방지).
+ * 이 파일은 CDN 기반 fallback / 비-Next.js 환경용.
+ */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+@import url("https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.css");
+@import url("https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.css");

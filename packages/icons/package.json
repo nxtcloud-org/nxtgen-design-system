@@ -1,0 +1,55 @@
+{
+  "name": "@nxtgen-org/icons",
+  "version": "0.1.0",
+  "description": "NxtGen icons — Lucide re-export + 자체 아이콘",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nxtcloud-org/nxtgen-design-system.git",
+    "directory": "packages/icons"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./custom": {
+      "types": "./dist/custom/index.d.ts",
+      "import": "./dist/custom/index.js",
+      "require": "./dist/custom/index.cjs"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsup",
+    "build:custom": "node ./scripts/build-custom.mjs",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist src/custom/generated.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "dependencies": {
+    "lucide-react": "0.469.0"
+  },
+  "devDependencies": {
+    "@nxtgen-org/tsconfig": "workspace:*",
+    "@nxtgen-org/tsup-config": "workspace:*",
+    "@svgr/core": "8.1.0",
+    "@svgr/plugin-jsx": "8.1.0",
+    "@svgr/plugin-prettier": "8.1.0",
+    "@types/react": "19.0.2",
+    "react": "19.0.0",
+    "tsup": "8.3.5",
+    "typescript": "5.7.3"
+  }
+}

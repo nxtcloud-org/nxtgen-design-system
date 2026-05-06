@@ -1,0 +1,39 @@
+{
+  "name": "nxtgen-design-system",
+  "private": true,
+  "version": "0.0.0",
+  "description": "NxtGen — Design System for AI applications",
+  "workspaces": ["apps/*", "packages/*", "tooling/*"],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "type-check": "turbo run type-check",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "tokens:build": "turbo run build --filter=@nxtgen-org/tokens",
+    "storybook": "turbo run dev --filter=docs",
+    "changeset": "changeset",
+    "version": "changeset version && bun install --lockfile-only",
+    "release": "turbo run build && changeset publish"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@changesets/cli": "2.27.11",
+    "turbo": "2.3.3",
+    "typescript": "5.7.3"
+  },
+  "packageManager": "bun@1.2.20",
+  "engines": {
+    "node": ">=20"
+  },
+  "trustedDependencies": [
+    "@biomejs/biome",
+    "@bundled-es-modules/glob",
+    "esbuild",
+    "sharp",
+    "style-dictionary"
+  ]
+}
