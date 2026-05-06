@@ -1,6 +1,6 @@
 {
   "name": "@nxtgen-org/css",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "NxtGen global CSS — reset, fonts, theme",
   "type": "module",
   "repository": {
