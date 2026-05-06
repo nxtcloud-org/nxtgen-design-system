@@ -2,12 +2,7 @@
 
 import { Checkbox } from "@nxtgen-org/react";
 import { useState } from "react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function CheckboxDoc() {
   return (
@@ -17,8 +12,8 @@ export default function CheckboxDoc() {
       tagline="다중 선택. indeterminate 상태 지원."
       description={
         <p>
-          폼 안 다중 선택, 동의 항목 등에 사용. 부모-자식 트리 표현 시
-          <code> indeterminate</code> 지원. Radix Checkbox 기반.
+          폼 안 다중 선택, 동의 항목 등에 사용. 부모-자식 트리 표현 시<code> indeterminate</code>{" "}
+          지원. Radix Checkbox 기반.
         </p>
       }
       importLine={`import { Checkbox } from "@nxtgen-org/react";`}

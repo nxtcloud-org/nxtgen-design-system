@@ -6,6 +6,7 @@
 @tailwind utilities;
 
 /* tokens 의존 글로벌 스타일은 utilities 뒤에 둬서 element selector가 utility를 안 이김 */
+/* biome-ignore lint/correctness/noInvalidPositionAtImportRule: intentional cascade ordering */
 @import "@nxtgen-org/css/base";
 
 @layer utilities {

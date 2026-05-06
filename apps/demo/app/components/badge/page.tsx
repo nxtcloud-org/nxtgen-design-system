@@ -1,11 +1,6 @@
 import { Sparkles } from "@nxtgen-org/icons";
 import { Badge } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function BadgeDoc() {
   return (
@@ -15,8 +10,8 @@ export default function BadgeDoc() {
       tagline="짧은 메타 정보 표시 라벨."
       description={
         <p>
-          상태(NEW, Online), 카운트, 분류 등. 인터랙션 없는 정적 라벨.
-          액션이 있다면 <code>Button</code> 또는 <code>Tag</code>(추후) 사용.
+          상태(NEW, Online), 카운트, 분류 등. 인터랙션 없는 정적 라벨. 액션이 있다면{" "}
+          <code>Button</code> 또는 <code>Tag</code>(추후) 사용.
         </p>
       }
       importLine={`import { Badge } from "@nxtgen-org/react";`}
@@ -24,17 +19,13 @@ export default function BadgeDoc() {
       <ComponentSection title="Variants">
         <Variant
           title="7 variants"
-          preview={
-            <>
-              {(["neutral", "brand", "success", "warning", "danger", "info", "gradient"] as const).map(
-                (v) => (
-                  <Badge key={v} variant={v}>
-                    {v}
-                  </Badge>
-                ),
-              )}
-            </>
-          }
+          preview={(
+            ["neutral", "brand", "success", "warning", "danger", "info", "gradient"] as const
+          ).map((v) => (
+            <Badge key={v} variant={v}>
+              {v}
+            </Badge>
+          ))}
           code={`<Badge variant="neutral">neutral</Badge>
 <Badge variant="brand">brand</Badge>
 <Badge variant="success">success</Badge>
@@ -50,9 +41,15 @@ export default function BadgeDoc() {
           title="sm / md / lg"
           preview={
             <>
-              <Badge size="sm" variant="brand">sm</Badge>
-              <Badge size="md" variant="brand">md</Badge>
-              <Badge size="lg" variant="brand">lg</Badge>
+              <Badge size="sm" variant="brand">
+                sm
+              </Badge>
+              <Badge size="md" variant="brand">
+                md
+              </Badge>
+              <Badge size="lg" variant="brand">
+                lg
+              </Badge>
             </>
           }
           code={`<Badge size="sm" variant="brand">sm</Badge>

@@ -1,10 +1,5 @@
 import { Spinner } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function SpinnerDoc() {
   return (
@@ -59,7 +54,12 @@ export default function SpinnerDoc() {
           rows={[
             { name: "size", type: '"sm" | "md" | "lg"', defaultValue: '"md"' },
             { name: "tone", type: '"brand" | "neutral" | "onBrand"', defaultValue: '"brand"' },
-            { name: "label", type: "string", defaultValue: '"로딩 중"', description: "스크린리더 라벨." },
+            {
+              name: "label",
+              type: "string",
+              defaultValue: '"로딩 중"',
+              description: "스크린리더 라벨.",
+            },
           ]}
         />
       </ComponentSection>

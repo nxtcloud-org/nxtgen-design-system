@@ -1,11 +1,6 @@
 import { ArrowRight, Plus, Sparkles } from "@nxtgen-org/icons";
 import { Button } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function ButtonDoc() {
   return (
@@ -16,13 +11,13 @@ export default function ButtonDoc() {
       description={
         <>
           <p>
-            텍스트와 (선택적으로) 아이콘으로 구성되며, 시각적 강도에 따라 6가지
-            variant를 제공합니다. <code>asChild</code>로 Radix Slot 패턴을 지원해
+            텍스트와 (선택적으로) 아이콘으로 구성되며, 시각적 강도에 따라 6가지 variant를
+            제공합니다. <code>asChild</code>로 Radix Slot 패턴을 지원해
             <code> {"<Link>"}</code> 등 다른 컴포넌트로 자연스럽게 변환할 수 있습니다.
           </p>
           <p className="mt-3">
-            <strong>언제 쓰는가</strong> — 폼 제출, 확인/취소, 페이지 이동, 다이얼로그
-            트리거 등. 동일 영역에 여러 버튼이 있다면 가장 중요한 액션 1개만
+            <strong>언제 쓰는가</strong> — 폼 제출, 확인/취소, 페이지 이동, 다이얼로그 트리거 등.
+            동일 영역에 여러 버튼이 있다면 가장 중요한 액션 1개만
             <code> primary</code>로, 나머지는 <code>secondary</code> 또는
             <code> ghost</code>로 위계를 잡습니다.
           </p>
@@ -38,7 +33,7 @@ export default function ButtonDoc() {
           title="Primary"
           description="가장 중요한 액션. 페이지당 1개."
           preview={<Button>저장</Button>}
-          code={`<Button>저장</Button>`}
+          code={"<Button>저장</Button>"}
         />
         <Variant
           title="Secondary"
@@ -78,10 +73,7 @@ export default function ButtonDoc() {
         />
       </ComponentSection>
 
-      <ComponentSection
-        title="Sizes"
-        description="3가지. 같은 영역에서 여러 사이즈 혼용은 지양."
-      >
+      <ComponentSection title="Sizes" description="3가지. 같은 영역에서 여러 사이즈 혼용은 지양.">
         <Variant
           title="Three sizes"
           preview={
@@ -146,7 +138,7 @@ export default function ButtonDoc() {
               <Button block>가입하기</Button>
             </div>
           }
-          code={`<Button block>가입하기</Button>`}
+          code={"<Button block>가입하기</Button>"}
           align="start"
         />
       </ComponentSection>

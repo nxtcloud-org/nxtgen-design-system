@@ -1,13 +1,13 @@
 import { TokenPage, TokenSection } from "../../_components/doc";
 
 const SCALES = [
-  { name: "blue",    label: "Blue (Primary)" },
+  { name: "blue", label: "Blue (Primary)" },
   { name: "magenta", label: "Magenta (Accent)" },
-  { name: "gray",    label: "Gray" },
+  { name: "gray", label: "Gray" },
   { name: "success", label: "Success" },
   { name: "warning", label: "Warning" },
-  { name: "danger",  label: "Danger" },
-  { name: "info",    label: "Info" },
+  { name: "danger", label: "Danger" },
+  { name: "info", label: "Info" },
 ] as const;
 
 const STEPS = ["50", "100", "200", "300", "400", "500", "600", "700", "800", "900"] as const;
@@ -18,14 +18,10 @@ export default function ColorTokenPage() {
     <TokenPage
       name="Color"
       tagline="Primitive 색상 스케일 + 시그니처 그라디언트."
-      description={
-        <>
-          <p>
-            <strong>Primitive 색은 컴포넌트에서 직접 참조 금지</strong> — 반드시
-            <code> Semantic</code> 토큰을 통해 사용합니다. light/dark 자동 적응을 보장.
-          </p>
-        </>
-      }
+      description=<p>
+        <strong>Primitive 색은 컴포넌트에서 직접 참조 금지</strong> — 반드시
+        <code> Semantic</code> 토큰을 통해 사용합니다. light/dark 자동 적응을 보장.
+      </p>
       usage={`var(--color-blue-500) · bg-brand · tokens.color.blue["500"]`}
     >
       {SCALES.map(({ name, label }) => (

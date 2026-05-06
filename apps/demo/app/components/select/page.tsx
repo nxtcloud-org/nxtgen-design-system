@@ -1,12 +1,7 @@
 "use client";
 
 import { Select } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function SelectDoc() {
   return (
@@ -17,8 +12,8 @@ export default function SelectDoc() {
       description={
         <p>
           항목이 많거나 그룹화가 필요한 경우. Compound:
-          <code> Trigger / Content / Group / Label / Item / Separator</code>.
-          Radix Select 기반 — 키보드, 포커스 트랩, 가상 포커스 모두 표준.
+          <code> Trigger / Content / Group / Label / Item / Separator</code>. Radix Select 기반 —
+          키보드, 포커스 트랩, 가상 포커스 모두 표준.
         </p>
       }
       importLine={`import { Select } from "@nxtgen-org/react";`}
@@ -106,11 +101,19 @@ export default function SelectDoc() {
       <ComponentSection title="API">
         <PropsTable
           rows={[
-            { name: "Select", type: "Radix Select Root", description: "value/defaultValue/onValueChange." },
+            {
+              name: "Select",
+              type: "Radix Select Root",
+              description: "value/defaultValue/onValueChange.",
+            },
             { name: "Trigger", type: "props + size?: 'sm'|'md'|'lg'" },
             { name: "Content", type: "Radix Content + 자체 styling" },
             { name: "Item", type: "value: string + children" },
-            { name: "Group / Label / Separator", type: "—", description: "Label은 Group 내부 필수." },
+            {
+              name: "Group / Label / Separator",
+              type: "—",
+              description: "Label은 Group 내부 필수.",
+            },
           ]}
         />
       </ComponentSection>

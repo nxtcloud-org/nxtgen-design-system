@@ -2,12 +2,7 @@
 
 import { ModelSelector, PromptInput } from "@nxtgen-org/react";
 import { useState } from "react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 const MODELS = [
   { value: "opus", label: "Opus 4.7", group: "Anthropic", tier: "frontier" as const },
@@ -39,9 +34,17 @@ export default function PromptInputDoc() {
       <ComponentSection title="API">
         <PropsTable
           rows={[
-            { name: "value / defaultValue", type: "string", description: "controlled / uncontrolled." },
+            {
+              name: "value / defaultValue",
+              type: "string",
+              description: "controlled / uncontrolled.",
+            },
             { name: "onChange", type: "(value: string) => void" },
-            { name: "onSubmit", type: "(value: string) => void", description: "⌘+Enter 또는 send." },
+            {
+              name: "onSubmit",
+              type: "(value: string) => void",
+              description: "⌘+Enter 또는 send.",
+            },
             { name: "isStreaming", type: "boolean", description: "true면 stop 버튼." },
             { name: "onStop", type: "() => void" },
             { name: "enableAttach", type: "boolean", description: "파일 첨부 버튼." },
@@ -66,7 +69,7 @@ function BasicDemo() {
           {last && <p className="text-xs text-text-tertiary">전송: {last}</p>}
         </div>
       }
-      code={`<PromptInput onSubmit={(text) => sendMessage(text)} />`}
+      code={"<PromptInput onSubmit={(text) => sendMessage(text)} />"}
       align="start"
     />
   );

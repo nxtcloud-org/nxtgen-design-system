@@ -2,12 +2,7 @@
 
 import { MoreHorizontal, Sparkles, Trash2 } from "@nxtgen-org/icons";
 import { Badge, Button, Card, IconButton } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function CardDoc() {
   return (
@@ -18,7 +13,8 @@ export default function CardDoc() {
       description={
         <p>
           내부 컴포넌트(<code>Header / Title / Description / Body / Actions</code>)는 모두 옵셔널.
-          본문 색은 <code>opacity-80/85</code>로 부모 색을 상속해 일반/그라디언트 카드 어디서나 가독성 자동.
+          본문 색은 <code>opacity-80/85</code>로 부모 색을 상속해 일반/그라디언트 카드 어디서나
+          가독성 자동.
         </p>
       }
       importLine={`import { Card } from "@nxtgen-org/react";`}
@@ -139,7 +135,11 @@ export default function CardDoc() {
       <ComponentSection title="API">
         <PropsTable
           rows={[
-            { name: "variant", type: '"outlined" | "elevated" | "ghost"', defaultValue: '"outlined"' },
+            {
+              name: "variant",
+              type: '"outlined" | "elevated" | "ghost"',
+              defaultValue: '"outlined"',
+            },
             { name: "padding", type: '"none" | "sm" | "md" | "lg"', defaultValue: '"md"' },
             { name: "radius", type: '"md" | "lg" | "xl"', defaultValue: '"lg"' },
             { name: "Card.Header", type: "div", description: "flex justify-between." },

@@ -1,10 +1,5 @@
 import { MessageBubble } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function MessageBubbleDoc() {
   return (
@@ -65,8 +60,16 @@ export default function MessageBubbleDoc() {
           rows={[
             { name: "role", type: '"user" | "assistant" | "system"', defaultValue: '"assistant"' },
             { name: "timestamp", type: "string", description: "말풍선 아래 시각 표시." },
-            { name: "avatar", type: "ReactNode", description: "assistant 좌측 아바타. 기본 AgentAvatar." },
-            { name: "gradientBorder", type: "boolean", description: "assistant에만 적용. 그라디언트 1.5px border." },
+            {
+              name: "avatar",
+              type: "ReactNode",
+              description: "assistant 좌측 아바타. 기본 AgentAvatar.",
+            },
+            {
+              name: "gradientBorder",
+              type: "boolean",
+              description: "assistant에만 적용. 그라디언트 1.5px border.",
+            },
           ]}
         />
       </ComponentSection>

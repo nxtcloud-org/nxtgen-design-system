@@ -30,15 +30,7 @@ export interface MessageBubbleProps
 
 export const MessageBubble = forwardRef<HTMLDivElement, MessageBubbleProps>(
   (
-    {
-      className,
-      role = "assistant",
-      timestamp,
-      avatar,
-      gradientBorder,
-      children,
-      ...props
-    },
+    { className, role = "assistant", timestamp, avatar, gradientBorder, children, ...props },
     ref,
   ) => {
     if (role === "system") {
@@ -55,11 +47,7 @@ export const MessageBubble = forwardRef<HTMLDivElement, MessageBubbleProps>(
     return (
       <div
         ref={ref}
-        className={cn(
-          "w-full flex gap-2",
-          isUser ? "justify-end" : "justify-start",
-          className,
-        )}
+        className={cn("w-full flex gap-2", isUser ? "justify-end" : "justify-start", className)}
         {...props}
       >
         {!isUser && (avatar ?? <AgentAvatar size="sm" />)}
@@ -79,9 +67,7 @@ export const MessageBubble = forwardRef<HTMLDivElement, MessageBubbleProps>(
           ) : (
             <div className={bubble({ role })}>{children}</div>
           )}
-          {timestamp && (
-            <span className="text-xs text-text-tertiary px-1">{timestamp}</span>
-          )}
+          {timestamp && <span className="text-xs text-text-tertiary px-1">{timestamp}</span>}
         </div>
       </div>
     );

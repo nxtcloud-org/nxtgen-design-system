@@ -22,7 +22,7 @@ export default function RadiusTokenPage() {
           위주. <code>full</code>은 pill·아바타 전용.
         </p>
       }
-      usage={`var(--radius-md) · rounded-md · tokens.radius.md`}
+      usage={"var(--radius-md) · rounded-md · tokens.radius.md"}
     >
       <TokenSection title="Scale">
         <div className="grid grid-cols-4 md:grid-cols-8 gap-4">

@@ -30,13 +30,9 @@ export function ComponentPage({
         <div className="text-xs font-medium text-text-tertiary uppercase tracking-wider mb-2">
           {category}
         </div>
-        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">
-          {name}
-        </h1>
+        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">{name}</h1>
         <p className="text-lg text-text-secondary mb-6">{tagline}</p>
-        <div className="text-sm text-text-secondary leading-relaxed">
-          {description}
-        </div>
+        <div className="text-sm text-text-secondary leading-relaxed">{description}</div>
         <div className="mt-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-subtle border border-default font-mono text-xs">
           {importLine}
         </div>
@@ -69,10 +65,7 @@ export function ComponentSection({
   return (
     <section className="space-y-6 scroll-mt-20">
       <div>
-        <h2
-          id={id}
-          className="text-2xl font-semibold tracking-tight mb-2 scroll-mt-20"
-        >
+        <h2 id={id} className="text-2xl font-semibold tracking-tight mb-2 scroll-mt-20">
           {title}
         </h2>
         {description && <p className="text-text-secondary">{description}</p>}

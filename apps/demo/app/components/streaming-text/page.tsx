@@ -2,12 +2,7 @@
 
 import { Button, StreamingText } from "@nxtgen-org/react";
 import { useState } from "react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 const SAMPLE =
   "토큰 단위로 점진 출력하는 LLM 응답 시뮬레이션. 커서가 깜빡이며 문자가 하나씩 나타납니다.";
@@ -20,8 +15,8 @@ export default function StreamingTextDoc() {
       tagline="setInterval로 토큰 단위 점진 출력 + 커서 blink."
       description={
         <p>
-          LLM 스트리밍 응답을 시뮬레이션. 실제 SSE/WebSocket 스트림 사용 시는 받은 토큰을
-          점진적으로 <code>text</code> prop에 누적시키면 됩니다.
+          LLM 스트리밍 응답을 시뮬레이션. 실제 SSE/WebSocket 스트림 사용 시는 받은 토큰을 점진적으로{" "}
+          <code>text</code> prop에 누적시키면 됩니다.
         </p>
       }
       importLine={`import { StreamingText } from "@nxtgen-org/react";`}
@@ -35,8 +30,18 @@ export default function StreamingTextDoc() {
           rows={[
             { name: "text", type: "string", required: true, description: "전체 텍스트." },
             { name: "speed", type: "number", defaultValue: "30", description: "토큰당 ms." },
-            { name: "cursor", type: "boolean", defaultValue: "true", description: "blink 커서 표시." },
-            { name: "done", type: "boolean", defaultValue: "false", description: "완료된 상태로 시작 (replay 방지)." },
+            {
+              name: "cursor",
+              type: "boolean",
+              defaultValue: "true",
+              description: "blink 커서 표시.",
+            },
+            {
+              name: "done",
+              type: "boolean",
+              defaultValue: "false",
+              description: "완료된 상태로 시작 (replay 방지).",
+            },
             { name: "onComplete", type: "() => void" },
           ]}
         />
@@ -60,7 +65,7 @@ function Demo() {
           </Button>
         </div>
       }
-      code={`<StreamingText text={SAMPLE} speed={25} />`}
+      code={"<StreamingText text={SAMPLE} speed={25} />"}
       align="start"
     />
   );

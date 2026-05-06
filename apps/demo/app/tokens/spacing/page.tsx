@@ -1,17 +1,30 @@
 import { TokenPage, TokenSection } from "../../_components/doc";
 
 const SCALE = [
-  ["0",   0],   ["0.5", 2],  ["1",  4],   ["1.5", 6],  ["2",  8],
-  ["3",  12],   ["4",  16],  ["5",  20],  ["6",   24], ["8",  32],
-  ["10", 40],   ["12", 48],  ["16", 64],  ["20",  80], ["24", 96], ["32", 128],
+  ["0", 0],
+  ["0.5", 2],
+  ["1", 4],
+  ["1.5", 6],
+  ["2", 8],
+  ["3", 12],
+  ["4", 16],
+  ["5", 20],
+  ["6", 24],
+  ["8", 32],
+  ["10", 40],
+  ["12", 48],
+  ["16", 64],
+  ["20", 80],
+  ["24", 96],
+  ["32", 128],
 ] as const;
 
 const GAP = [
-  ["tight",   4],
-  ["snug",    8],
+  ["tight", 4],
+  ["snug", 8],
   ["regular", 12],
   ["relaxed", 16],
-  ["loose",   24],
+  ["loose", 24],
 ] as const;
 
 export default function SpacingTokenPage() {
@@ -20,9 +33,7 @@ export default function SpacingTokenPage() {
       name="Spacing"
       tagline="4px base · 16단계."
       description={
-        <p>
-          모든 spacing은 4의 배수 (단, 0/0.5/1.5는 미세 조정용). 빠른 산수 + 일관된 리듬.
-        </p>
+        <p>모든 spacing은 4의 배수 (단, 0/0.5/1.5는 미세 조정용). 빠른 산수 + 일관된 리듬.</p>
       }
       usage={`var(--spacing-4) · gap-4 · p-4 · tokens.spacing["4"]`}
     >

@@ -5,12 +5,8 @@ export default function ComponentsCatalog() {
   return (
     <div className="px-8 py-12 max-w-4xl">
       <header className="mb-12">
-        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">
-          Components
-        </h1>
-        <p className="text-lg text-text-secondary">
-          NxtGen 디자인 시스템의 모든 React 컴포넌트.
-        </p>
+        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">Components</h1>
+        <p className="text-lg text-text-secondary">NxtGen 디자인 시스템의 모든 React 컴포넌트.</p>
       </header>
 
       <div className="space-y-12">
@@ -26,12 +22,8 @@ export default function ComponentsCatalog() {
                   href={`/components/${item.slug}`}
                   className="block p-4 rounded-md border border-default bg-surface hover:border-strong hover:shadow-sm transition-all duration-fast ease-standard"
                 >
-                  <div className="font-semibold tracking-[-0.01em] mb-1">
-                    {item.name}
-                  </div>
-                  <div className="text-sm text-text-secondary">
-                    {item.tagline}
-                  </div>
+                  <div className="font-semibold tracking-[-0.01em] mb-1">{item.name}</div>
+                  <div className="text-sm text-text-secondary">{item.tagline}</div>
                 </Link>
               ))}
             </div>

@@ -3,12 +3,7 @@
 import { ChevronDown, Copy, LogOut, Settings, User } from "@nxtgen-org/icons";
 import { Button, DropdownMenu } from "@nxtgen-org/react";
 import { useState } from "react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function DropdownMenuDoc() {
   return (
@@ -18,8 +13,8 @@ export default function DropdownMenuDoc() {
       tagline="컨텍스트 메뉴 — sub menu, checkbox/radio item, shortcut 지원."
       description={
         <p>
-          더보기(<code>···</code>) 버튼, 사용자 메뉴 등에 사용. Radix DropdownMenu 기반 —
-          키보드 네비, 화살표 sub-menu 진입 표준.
+          더보기(<code>···</code>) 버튼, 사용자 메뉴 등에 사용. Radix DropdownMenu 기반 — 키보드
+          네비, 화살표 sub-menu 진입 표준.
         </p>
       }
       importLine={`import { DropdownMenu } from "@nxtgen-org/react";`}

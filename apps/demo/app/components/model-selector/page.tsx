@@ -2,18 +2,31 @@
 
 import { ModelSelector } from "@nxtgen-org/react";
 import { useState } from "react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 const MODELS = [
-  { value: "opus",   label: "Claude Opus 4.7",   group: "Anthropic", tier: "frontier" as const, description: "복잡 태스크 · 추론" },
-  { value: "sonnet", label: "Claude Sonnet 4.6", group: "Anthropic", tier: "balanced" as const, description: "균형" },
-  { value: "haiku",  label: "Claude Haiku 4.5",  group: "Anthropic", tier: "fast"     as const, description: "초고속" },
-  { value: "gpt-5",  label: "GPT-5",             group: "OpenAI",    tier: "frontier" as const },
+  {
+    value: "opus",
+    label: "Claude Opus 4.7",
+    group: "Anthropic",
+    tier: "frontier" as const,
+    description: "복잡 태스크 · 추론",
+  },
+  {
+    value: "sonnet",
+    label: "Claude Sonnet 4.6",
+    group: "Anthropic",
+    tier: "balanced" as const,
+    description: "균형",
+  },
+  {
+    value: "haiku",
+    label: "Claude Haiku 4.5",
+    group: "Anthropic",
+    tier: "fast" as const,
+    description: "초고속",
+  },
+  { value: "gpt-5", label: "GPT-5", group: "OpenAI", tier: "frontier" as const },
 ];
 
 export default function ModelSelectorDoc() {
@@ -61,7 +74,9 @@ function Demo() {
       preview={
         <div className="w-full max-w-xs">
           <ModelSelector models={MODELS} value={model} onChange={setModel} />
-          <p className="mt-2 text-xs text-text-tertiary">선택: <code>{model}</code></p>
+          <p className="mt-2 text-xs text-text-tertiary">
+            선택: <code>{model}</code>
+          </p>
         </div>
       }
       code={`const MODELS = [

@@ -22,10 +22,28 @@ import { useState } from "react";
 import { DemoNav } from "../_components/DemoNav";
 
 const MODELS = [
-  { value: "opus",   label: "Claude Opus 4.7",   group: "Anthropic", tier: "frontier" as const, description: "복잡한 태스크 · 추론" },
-  { value: "sonnet", label: "Claude Sonnet 4.6", group: "Anthropic", tier: "balanced" as const, description: "균형잡힌 성능" },
-  { value: "haiku",  label: "Claude Haiku 4.5",  group: "Anthropic", tier: "fast"     as const, description: "초고속 · 저비용" },
-  { value: "gpt-5",  label: "GPT-5",             group: "OpenAI",    tier: "frontier" as const },
+  {
+    value: "opus",
+    label: "Claude Opus 4.7",
+    group: "Anthropic",
+    tier: "frontier" as const,
+    description: "복잡한 태스크 · 추론",
+  },
+  {
+    value: "sonnet",
+    label: "Claude Sonnet 4.6",
+    group: "Anthropic",
+    tier: "balanced" as const,
+    description: "균형잡힌 성능",
+  },
+  {
+    value: "haiku",
+    label: "Claude Haiku 4.5",
+    group: "Anthropic",
+    tier: "fast" as const,
+    description: "초고속 · 저비용",
+  },
+  { value: "gpt-5", label: "GPT-5", group: "OpenAI", tier: "frontier" as const },
 ];
 
 type Msg =
@@ -237,7 +255,11 @@ export default function Chat() {
                     input={{ pattern: "MISSING" }}
                     output={{ error: "no matches" }}
                   />
-                  <ToolCallBlock name="web_search" status="running" input={{ query: "Pretendard" }} />
+                  <ToolCallBlock
+                    name="web_search"
+                    status="running"
+                    input={{ query: "Pretendard" }}
+                  />
                 </div>
               </Card.Body>
             </Card>

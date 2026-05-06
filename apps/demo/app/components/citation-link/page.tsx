@@ -1,10 +1,5 @@
 import { CitationLink, TooltipProvider } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function CitationLinkDoc() {
   return (

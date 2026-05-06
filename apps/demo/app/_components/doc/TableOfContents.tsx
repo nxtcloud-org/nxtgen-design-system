@@ -22,12 +22,8 @@ export function TableOfContents() {
   useEffect(() => {
     // 한 frame 기다림 — page render 완료 후 DOM scan
     const timer = requestAnimationFrame(() => {
-      const els = Array.from(
-        document.querySelectorAll<HTMLHeadingElement>("main h2[id]"),
-      );
-      setHeadings(
-        els.map((el) => ({ id: el.id, text: el.textContent ?? "" })),
-      );
+      const els = Array.from(document.querySelectorAll<HTMLHeadingElement>("main h2[id]"));
+      setHeadings(els.map((el) => ({ id: el.id, text: el.textContent ?? "" })));
     });
     return () => cancelAnimationFrame(timer);
   }, [pathname]);

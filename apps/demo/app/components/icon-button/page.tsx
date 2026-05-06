@@ -2,12 +2,7 @@
 
 import { Heart, MoreHorizontal, Search, Settings, Trash2 } from "@nxtgen-org/icons";
 import { IconButton } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function IconButtonDoc() {
   return (
@@ -15,14 +10,10 @@ export default function IconButtonDoc() {
       category="Actions"
       name="IconButton"
       tagline="아이콘만으로 액션을 표현하는 버튼."
-      description={
-        <>
-          <p>
-            툴바·헤더·테이블 행 등 공간이 좁고 액션 의미가 아이콘으로 충분할 때.
-            시각 라벨이 없으므로 <code>aria-label</code>이 <strong>필수</strong>.
-          </p>
-        </>
-      }
+      description=<p>
+        툴바·헤더·테이블 행 등 공간이 좁고 액션 의미가 아이콘으로 충분할 때. 시각 라벨이 없으므로{" "}
+        <code>aria-label</code>이 <strong>필수</strong>.
+      </p>
       importLine={`import { IconButton } from "@nxtgen-org/react";`}
     >
       <ComponentSection title="Variants">
@@ -64,7 +55,11 @@ export default function IconButtonDoc() {
           rows={[
             { name: "icon", type: "ReactNode", description: "표시할 아이콘.", required: true },
             { name: "aria-label", type: "string", description: "스크린리더 라벨.", required: true },
-            { name: "variant", type: '"primary" | "secondary" | "ghost" | "danger"', defaultValue: '"ghost"' },
+            {
+              name: "variant",
+              type: '"primary" | "secondary" | "ghost" | "danger"',
+              defaultValue: '"ghost"',
+            },
             { name: "size", type: '"sm" | "md" | "lg"', defaultValue: '"md"' },
             { name: "asChild", type: "boolean", defaultValue: "false", description: "Radix Slot." },
             { name: "...props", type: "ButtonHTMLAttributes<HTMLButtonElement>" },

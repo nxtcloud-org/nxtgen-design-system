@@ -1,10 +1,5 @@
 import { Card, Skeleton } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function SkeletonDoc() {
   return (
@@ -14,8 +9,8 @@ export default function SkeletonDoc() {
       tagline="콘텐츠가 로드되기 전 자리 표시 placeholder."
       description={
         <p>
-          페이지 진입 시 layout shift를 줄이고 인지 속도를 빠르게. 로드될 컨텐츠의 모양과
-          비슷하게 배치.
+          페이지 진입 시 layout shift를 줄이고 인지 속도를 빠르게. 로드될 컨텐츠의 모양과 비슷하게
+          배치.
         </p>
       }
       importLine={`import { Skeleton } from "@nxtgen-org/react";`}

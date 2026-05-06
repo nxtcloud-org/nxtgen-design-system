@@ -1,10 +1,5 @@
 import { TokenUsageBar } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function TokenUsageBarDoc() {
   return (
@@ -14,8 +9,8 @@ export default function TokenUsageBarDoc() {
       tagline="컨텍스트 사용량 progress bar — 임계점 자동 컬러 전환."
       description={
         <p>
-          <code>warnAt</code>(기본 75%), <code>dangerAt</code>(기본 90%)을 넘으면
-          색상이 brand → warning → danger로 자동 전환. 숫자 포맷도 K/M 자동.
+          <code>warnAt</code>(기본 75%), <code>dangerAt</code>(기본 90%)을 넘으면 색상이 brand →
+          warning → danger로 자동 전환. 숫자 포맷도 K/M 자동.
         </p>
       }
       importLine={`import { TokenUsageBar } from "@nxtgen-org/react";`}
@@ -45,7 +40,7 @@ export default function TokenUsageBarDoc() {
               <TokenUsageBar used={120000} total={200000} compact />
             </div>
           }
-          code={`<TokenUsageBar used={120000} total={200000} compact />`}
+          code={"<TokenUsageBar used={120000} total={200000} compact />"}
           align="start"
         />
       </ComponentSection>

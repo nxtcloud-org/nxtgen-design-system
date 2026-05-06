@@ -5,12 +5,9 @@ export default function TokensCatalog() {
   return (
     <div className="px-8 py-12 max-w-4xl">
       <header className="mb-12">
-        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">
-          Design Tokens
-        </h1>
+        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">Design Tokens</h1>
         <p className="text-lg text-text-secondary">
-          DTCG JSON → CSS Variables · TypeScript const · Tailwind preset.
-          Light/Dark 자동 적응.
+          DTCG JSON → CSS Variables · TypeScript const · Tailwind preset. Light/Dark 자동 적응.
         </p>
       </header>
 

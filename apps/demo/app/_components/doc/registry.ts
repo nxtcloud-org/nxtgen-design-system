@@ -26,7 +26,11 @@ export const COMPONENT_GROUPS: CategoryGroup[] = [
   {
     category: "Inputs",
     items: [
-      { slug: "text-field", name: "TextField", tagline: "label + helper + error를 갖춘 텍스트 입력." },
+      {
+        slug: "text-field",
+        name: "TextField",
+        tagline: "label + helper + error를 갖춘 텍스트 입력.",
+      },
       { slug: "switch", name: "Switch", tagline: "on/off 토글." },
       { slug: "checkbox", name: "Checkbox", tagline: "다중 선택 + indeterminate 상태." },
       { slug: "radio-group", name: "RadioGroup", tagline: "단일 선택 라디오 그룹." },
@@ -46,7 +50,11 @@ export const COMPONENT_GROUPS: CategoryGroup[] = [
       { slug: "alert", name: "Alert", tagline: "인라인 알림 배너." },
       { slug: "tooltip", name: "Tooltip", tagline: "호버/포커스 보조 정보." },
       { slug: "dialog", name: "Dialog", tagline: "모달 다이얼로그." },
-      { slug: "dropdown-menu", name: "DropdownMenu", tagline: "컨텍스트 메뉴 + 서브메뉴/체크/라디오." },
+      {
+        slug: "dropdown-menu",
+        name: "DropdownMenu",
+        tagline: "컨텍스트 메뉴 + 서브메뉴/체크/라디오.",
+      },
       { slug: "toast", name: "Toast", tagline: "일시적 알림 (Provider + hook)." },
     ],
   },
@@ -59,15 +67,17 @@ export const COMPONENT_GROUPS: CategoryGroup[] = [
   },
   {
     category: "Navigation",
-    items: [
-      { slug: "tabs", name: "Tabs", tagline: "언더라인 인디케이터 탭." },
-    ],
+    items: [{ slug: "tabs", name: "Tabs", tagline: "언더라인 인디케이터 탭." }],
   },
   {
     category: "AI-Native",
     items: [
       { slug: "agent-avatar", name: "AgentAvatar", tagline: "그라디언트 보더 + 상태 표시 아바타." },
-      { slug: "message-bubble", name: "MessageBubble", tagline: "user/assistant/system 채팅 말풍선." },
+      {
+        slug: "message-bubble",
+        name: "MessageBubble",
+        tagline: "user/assistant/system 채팅 말풍선.",
+      },
       { slug: "streaming-text", name: "StreamingText", tagline: "토큰 단위 점진 출력 + 커서." },
       { slug: "thinking-indicator", name: "ThinkingIndicator", tagline: "그라디언트 점 3개 펄스." },
       { slug: "prompt-input", name: "PromptInput", tagline: "멀티라인 입력 + ⌘+Enter + 첨부." },
@@ -79,6 +89,4 @@ export const COMPONENT_GROUPS: CategoryGroup[] = [
   },
 ];
 
-export const ALL_COMPONENTS: ComponentMeta[] = COMPONENT_GROUPS.flatMap(
-  (g) => g.items,
-);
+export const ALL_COMPONENTS: ComponentMeta[] = COMPONENT_GROUPS.flatMap((g) => g.items);

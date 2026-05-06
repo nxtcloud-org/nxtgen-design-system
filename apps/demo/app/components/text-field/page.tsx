@@ -2,12 +2,7 @@
 
 import { Search } from "@nxtgen-org/icons";
 import { TextField } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function TextFieldDoc() {
   return (
@@ -17,8 +12,8 @@ export default function TextFieldDoc() {
       tagline="label · helper · error · slot을 포함한 텍스트 입력."
       description={
         <p>
-          단일 줄 텍스트 입력. 라벨은 <code>useId</code>로 자동 연결되어 접근성 보장,
-          좌우 슬롯으로 아이콘·키바인딩 힌트 추가 가능.
+          단일 줄 텍스트 입력. 라벨은 <code>useId</code>로 자동 연결되어 접근성 보장, 좌우 슬롯으로
+          아이콘·키바인딩 힌트 추가 가능.
         </p>
       }
       importLine={`import { TextField } from "@nxtgen-org/react";`}
@@ -103,7 +98,11 @@ export default function TextFieldDoc() {
             { name: "rightSlot", type: "ReactNode", description: "input 우측 (키 힌트 등)." },
             { name: "size", type: '"sm" | "md" | "lg"', defaultValue: '"md"' },
             { name: "required", type: "boolean", description: "라벨에 * 표시." },
-            { name: "...props", type: "InputHTMLAttributes<HTMLInputElement>", description: "표준 input 속성." },
+            {
+              name: "...props",
+              type: "InputHTMLAttributes<HTMLInputElement>",
+              description: "표준 input 속성.",
+            },
           ]}
         />
       </ComponentSection>

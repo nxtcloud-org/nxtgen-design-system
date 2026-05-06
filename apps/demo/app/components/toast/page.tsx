@@ -2,12 +2,7 @@
 
 import { Bot } from "@nxtgen-org/icons";
 import { Button, ToastProvider, useToast } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function ToastDoc() {
   return (
@@ -34,7 +29,7 @@ export default function ToastDoc() {
           title="App entry"
           preview={
             <pre className="text-xs font-mono text-text-secondary">
-              {`<ToastProvider>\n  <App />\n</ToastProvider>`}
+              {"<ToastProvider>\n  <App />\n</ToastProvider>"}
             </pre>
           }
           code={`// app/layout.tsx
@@ -57,7 +52,7 @@ export default function RootLayout({ children }) {
           rows={[
             { name: "ToastProvider", type: "{ duration?: number }", description: "기본 5000ms." },
             { name: "useToast()", type: "{ toast: (item) => void }" },
-            { name: "toast()", type: '{ variant, title, description?, duration? }' },
+            { name: "toast()", type: "{ variant, title, description?, duration? }" },
             { name: "variant", type: '"info" | "success" | "warning" | "danger"' },
           ]}
         />
@@ -76,7 +71,9 @@ function Demo() {
           <Button
             variant="secondary"
             size="sm"
-            onClick={() => toast({ variant: "info", title: "새 메시지", description: "에이전트 응답." })}
+            onClick={() =>
+              toast({ variant: "info", title: "새 메시지", description: "에이전트 응답." })
+            }
           >
             Info
           </Button>

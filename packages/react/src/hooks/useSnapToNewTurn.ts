@@ -44,12 +44,7 @@ export function useSnapToNewTurn<T extends SnapTarget>(
   messages: T[],
   options: UseSnapToNewTurnOptions = {},
 ) {
-  const {
-    triggerRole = "user",
-    snapOnMount = false,
-    behavior = "smooth",
-    offset = 0,
-  } = options;
+  const { triggerRole = "user", snapOnMount = false, behavior = "smooth", offset = 0 } = options;
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const refs = useRef<Map<T["id"], HTMLElement>>(new Map());

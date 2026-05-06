@@ -10,11 +10,11 @@ export default function ShadowTokenPage() {
       tagline="Elevation + focus + glow."
       description={
         <p>
-          깊이를 표현. dark 모드에선 자동으로 강도 조정 + border 보강. focus shadow는
-          포커스 가시성 — 키보드 네비 강조.
+          깊이를 표현. dark 모드에선 자동으로 강도 조정 + border 보강. focus shadow는 포커스 가시성
+          — 키보드 네비 강조.
         </p>
       }
-      usage={`var(--shadow-md) · shadow-md`}
+      usage={"var(--shadow-md) · shadow-md"}
     >
       <TokenSection title="Elevation">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6">

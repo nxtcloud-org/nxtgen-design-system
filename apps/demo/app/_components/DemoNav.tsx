@@ -3,14 +3,14 @@
 import { Button, cn } from "@nxtgen-org/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NxtGenLogo } from "./NxtGenLogo";
 import { ThemeToggle } from "../theme-toggle";
+import { NxtGenLogo } from "./NxtGenLogo";
 
 const NAV = [
-  { href: "/",           label: "Home" },
+  { href: "/", label: "Home" },
   { href: "/components", label: "Components" },
-  { href: "/chat",       label: "Chat" },
-  { href: "/tokens",     label: "Tokens" },
+  { href: "/chat", label: "Chat" },
+  { href: "/tokens", label: "Tokens" },
 ] as const;
 
 export function DemoNav({ subtitle }: { subtitle?: string }) {
@@ -35,20 +35,14 @@ export function DemoNav({ subtitle }: { subtitle?: string }) {
 
         <nav className="flex items-center gap-1">
           {NAV.map((item) => {
-            const active =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(item.href);
+            const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
             return (
               <Button
                 key={item.href}
                 variant="ghost"
                 size="sm"
                 asChild
-                className={cn(
-                  active &&
-                    "bg-subtle text-text-primary font-semibold hover:bg-muted",
-                )}
+                className={cn(active && "bg-subtle text-text-primary font-semibold hover:bg-muted")}
               >
                 <Link href={item.href}>{item.label}</Link>
               </Button>

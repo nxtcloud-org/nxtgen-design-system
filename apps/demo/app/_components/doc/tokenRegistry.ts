@@ -10,13 +10,13 @@ export interface TokenMeta {
 }
 
 export const TOKEN_PAGES: TokenMeta[] = [
-  { slug: "color",      name: "Color",      tagline: "Primitive scales 50–900 + signature gradient." },
-  { slug: "semantic",   name: "Semantic",   tagline: "Light/Dark 자동 스왑 시맨틱 매핑." },
+  { slug: "color", name: "Color", tagline: "Primitive scales 50–900 + signature gradient." },
+  { slug: "semantic", name: "Semantic", tagline: "Light/Dark 자동 스왑 시맨틱 매핑." },
   { slug: "typography", name: "Typography", tagline: "Pretendard + Geist · 14단계 스케일." },
-  { slug: "spacing",    name: "Spacing",    tagline: "4px base · 16단계." },
-  { slug: "radius",     name: "Radius",     tagline: "8단계 borderRadius." },
-  { slug: "shadow",     name: "Shadow",     tagline: "Elevation + focus + glow." },
-  { slug: "motion",     name: "Motion",     tagline: "Duration + easing." },
-  { slug: "z-index",    name: "Z-Index",    tagline: "레이어 우선순위." },
+  { slug: "spacing", name: "Spacing", tagline: "4px base · 16단계." },
+  { slug: "radius", name: "Radius", tagline: "8단계 borderRadius." },
+  { slug: "shadow", name: "Shadow", tagline: "Elevation + focus + glow." },
+  { slug: "motion", name: "Motion", tagline: "Duration + easing." },
+  { slug: "z-index", name: "Z-Index", tagline: "레이어 우선순위." },
   { slug: "breakpoint", name: "Breakpoint", tagline: "Mobile-first 5단계." },
 ];

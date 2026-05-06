@@ -1,10 +1,5 @@
 import { ToolCallBlock } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function ToolCallBlockDoc() {
   return (
@@ -14,8 +9,8 @@ export default function ToolCallBlockDoc() {
       tagline="에이전트의 도구 호출 표시 + JSON I/O 접힘/펼침."
       description={
         <p>
-          에이전트가 외부 도구(<code>read_file</code>, <code>web_search</code> 등)를
-          호출했을 때 표시. status에 따라 자동 아이콘/색.
+          에이전트가 외부 도구(<code>read_file</code>, <code>web_search</code> 등)를 호출했을 때
+          표시. status에 따라 자동 아이콘/색.
         </p>
       }
       importLine={`import { ToolCallBlock } from "@nxtgen-org/react";`}
@@ -25,9 +20,19 @@ export default function ToolCallBlockDoc() {
           title="pending / running / success / error"
           preview={
             <div className="w-full space-y-2">
-              <ToolCallBlock name="read_file" status="success" durationMs={12} input={{ path: "DESIGN.md" }} />
+              <ToolCallBlock
+                name="read_file"
+                status="success"
+                durationMs={12}
+                input={{ path: "DESIGN.md" }}
+              />
               <ToolCallBlock name="web_search" status="running" input={{ query: "Pretendard" }} />
-              <ToolCallBlock name="grep" status="error" durationMs={840} output={{ error: "no matches" }} />
+              <ToolCallBlock
+                name="grep"
+                status="error"
+                durationMs={840}
+                output={{ error: "no matches" }}
+              />
               <ToolCallBlock name="schedule" status="pending" />
             </div>
           }
@@ -70,7 +75,11 @@ export default function ToolCallBlockDoc() {
         <PropsTable
           rows={[
             { name: "name", type: "string", required: true },
-            { name: "status", type: '"pending" | "running" | "success" | "error"', defaultValue: '"success"' },
+            {
+              name: "status",
+              type: '"pending" | "running" | "success" | "error"',
+              defaultValue: '"success"',
+            },
             { name: "input", type: "unknown", description: "객체면 자동 stringify." },
             { name: "output", type: "unknown", description: "객체면 자동 stringify." },
             { name: "durationMs", type: "number" },

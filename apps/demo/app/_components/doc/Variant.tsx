@@ -13,20 +13,12 @@ interface VariantProps {
 }
 
 /** Preview를 위, Code를 아래에 배치 (상하 레이아웃). */
-export function Variant({
-  title,
-  description,
-  preview,
-  code,
-  align = "center",
-}: VariantProps) {
+export function Variant({ title, description, preview, code, align = "center" }: VariantProps) {
   return (
     <div className="space-y-3">
       <div>
         <h3 className="text-base font-semibold tracking-[-0.01em]">{title}</h3>
-        {description && (
-          <p className="text-sm text-text-secondary mt-1">{description}</p>
-        )}
+        {description && <p className="text-sm text-text-secondary mt-1">{description}</p>}
       </div>
       <div className="rounded-md border border-default overflow-hidden">
         <div

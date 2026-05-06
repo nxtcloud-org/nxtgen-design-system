@@ -1,7 +1,34 @@
 import { TokenPage, TokenSection } from "../../_components/doc";
 
-const BG = ["canvas", "surface", "subtle", "muted", "inverse", "brand", "brand-hover", "brand-subtle", "accent", "accent-hover", "success", "warning", "danger", "info"];
-const TEXT = ["primary", "secondary", "tertiary", "disabled", "inverse", "brand", "accent", "success", "warning", "danger", "on-brand"];
+const BG = [
+  "canvas",
+  "surface",
+  "subtle",
+  "muted",
+  "inverse",
+  "brand",
+  "brand-hover",
+  "brand-subtle",
+  "accent",
+  "accent-hover",
+  "success",
+  "warning",
+  "danger",
+  "info",
+];
+const TEXT = [
+  "primary",
+  "secondary",
+  "tertiary",
+  "disabled",
+  "inverse",
+  "brand",
+  "accent",
+  "success",
+  "warning",
+  "danger",
+  "on-brand",
+];
 const BORDER = ["default", "subtle", "strong", "focus", "danger"];
 
 export default function SemanticTokenPage() {
@@ -11,11 +38,11 @@ export default function SemanticTokenPage() {
       tagline="Light/Dark에서 자동 스왑되는 시맨틱 매핑."
       description={
         <p>
-          모든 컴포넌트가 사용해야 하는 layer. 우상단 토글로 light/dark 전환 시
-          모든 카드 색이 자동으로 바뀌는 것을 확인할 수 있습니다.
+          모든 컴포넌트가 사용해야 하는 layer. 우상단 토글로 light/dark 전환 시 모든 카드 색이
+          자동으로 바뀌는 것을 확인할 수 있습니다.
         </p>
       }
-      usage={`var(--bg-brand) · bg-brand · tokens.bg.brand`}
+      usage={"var(--bg-brand) · bg-brand · tokens.bg.brand"}
     >
       <TokenSection title="Background">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">

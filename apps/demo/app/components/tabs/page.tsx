@@ -1,12 +1,7 @@
 "use client";
 
 import { Tabs } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function TabsDoc() {
   return (
@@ -16,8 +11,8 @@ export default function TabsDoc() {
       tagline="같은 영역에서 다른 콘텐츠를 전환하는 탭."
       description={
         <p>
-          페이지 안 섹션 전환에 적합. 페이지 자체 전환은 <code>Link</code>를 사용.
-          Radix Tabs 기반 — 화살표 키 네비, focus 관리 표준.
+          페이지 안 섹션 전환에 적합. 페이지 자체 전환은 <code>Link</code>를 사용. Radix Tabs 기반 —
+          화살표 키 네비, focus 관리 표준.
         </p>
       }
       importLine={`import { Tabs } from "@nxtgen-org/react";`}
@@ -42,9 +37,7 @@ export default function TabsDoc() {
                   </p>
                 </Tabs.Content>
                 <Tabs.Content value="tools">
-                  <p className="text-sm text-text-secondary p-4 bg-subtle rounded-md">
-                    도구 정의.
-                  </p>
+                  <p className="text-sm text-text-secondary p-4 bg-subtle rounded-md">도구 정의.</p>
                 </Tabs.Content>
                 <Tabs.Content value="memory">
                   <p className="text-sm text-text-secondary p-4 bg-subtle rounded-md">

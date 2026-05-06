@@ -27,15 +27,11 @@ export function PropsTable({ rows }: { rows: PropRow[] }) {
                 {row.name}
                 {row.required && <span className="text-text-danger ml-1">*</span>}
               </td>
-              <td className="px-4 py-3 font-mono text-xs text-text-brand">
-                {row.type}
-              </td>
+              <td className="px-4 py-3 font-mono text-xs text-text-brand">{row.type}</td>
               <td className="px-4 py-3 font-mono text-xs text-text-tertiary">
                 {row.defaultValue ?? "—"}
               </td>
-              <td className="px-4 py-3 text-text-secondary">
-                {row.description ?? "—"}
-              </td>
+              <td className="px-4 py-3 text-text-secondary">{row.description ?? "—"}</td>
             </tr>
           ))}
         </tbody>

@@ -1,4 +1,11 @@
-import { AlertCircle, CheckCircle2, Info, type LucideIcon, TriangleAlert, X } from "@nxtgen-org/icons";
+import {
+  AlertCircle,
+  CheckCircle2,
+  Info,
+  type LucideIcon,
+  TriangleAlert,
+  X,
+} from "@nxtgen-org/icons";
 import { type VariantProps, cva } from "class-variance-authority";
 import { type HTMLAttributes, type ReactNode, forwardRef } from "react";
 import { cn } from "../../utils/cn";

@@ -2,12 +2,7 @@
 
 import { Trash2 } from "@nxtgen-org/icons";
 import { Button, Dialog } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function DialogDoc() {
   return (

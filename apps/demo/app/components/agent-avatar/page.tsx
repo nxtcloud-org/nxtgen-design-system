@@ -1,12 +1,7 @@
 "use client";
 
 import { AgentAvatar } from "@nxtgen-org/react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function AgentAvatarDoc() {
   return (

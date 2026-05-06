@@ -2,12 +2,7 @@
 
 import { RadioGroup } from "@nxtgen-org/react";
 import { useState } from "react";
-import {
-  ComponentPage,
-  ComponentSection,
-  PropsTable,
-  Variant,
-} from "../../_components/doc";
+import { ComponentPage, ComponentSection, PropsTable, Variant } from "../../_components/doc";
 
 export default function RadioGroupDoc() {
   return (
@@ -17,8 +12,8 @@ export default function RadioGroupDoc() {
       tagline="여러 옵션 중 하나만 선택."
       description={
         <p>
-          Compound API: <code>RadioGroup</code> + <code>RadioGroup.Item</code>. 항목 수가
-          5개 미만이고 모두 가시적으로 보여야 할 때. 그 이상은 <code>Select</code>.
+          Compound API: <code>RadioGroup</code> + <code>RadioGroup.Item</code>. 항목 수가 5개
+          미만이고 모두 가시적으로 보여야 할 때. 그 이상은 <code>Select</code>.
         </p>
       }
       importLine={`import { RadioGroup } from "@nxtgen-org/react";`}

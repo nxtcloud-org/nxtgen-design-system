@@ -37,9 +37,7 @@ export function CodeBlock({
   return (
     <div className="relative rounded-md border border-default bg-[#011627] overflow-hidden">
       <div className="flex items-center justify-between px-3 py-1.5 border-b border-white/10 text-xs">
-        <span className="font-mono uppercase tracking-wider text-white/50">
-          {language}
-        </span>
+        <span className="font-mono uppercase tracking-wider text-white/50">{language}</span>
         <IconButton
           aria-label="코드 복사"
           icon={
@@ -56,9 +54,7 @@ export function CodeBlock({
         />
       </div>
 
-      <div
-        className={`relative ${!expanded && isLong ? "max-h-[256px] overflow-hidden" : ""}`}
-      >
+      <div className={`relative ${!expanded && isLong ? "max-h-[256px] overflow-hidden" : ""}`}>
         <Highlight code={displayCode} language={language} theme={themes.nightOwl}>
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre
@@ -68,11 +64,8 @@ export function CodeBlock({
               {tokens.map((line, i) => {
                 const lineProps = getLineProps({ line });
                 return (
-                  <div
-                    key={i}
-                    {...lineProps}
-                    className={`${lineProps.className ?? ""} flex`}
-                  >
+                  // biome-ignore lint/suspicious/noArrayIndexKey: prism tokens are stable, no reordering
+                  <div key={i} {...lineProps} className={`${lineProps.className ?? ""} flex`}>
                     <span
                       aria-hidden
                       className="select-none text-right pr-4 pl-4 text-white/30 tabular-nums w-12 shrink-0"
@@ -82,6 +75,7 @@ export function CodeBlock({
                     <span className="flex-1 pr-4">
                       {line.map((token, key) => {
                         const tokenProps = getTokenProps({ token });
+                        // biome-ignore lint/suspicious/noArrayIndexKey: prism tokens are stable, no reordering
                         return <span key={key} {...tokenProps} />;
                       })}
                     </span>

@@ -9,27 +9,17 @@ interface TokenPageProps {
   children: ReactNode;
 }
 
-export function TokenPage({
-  name,
-  tagline,
-  description,
-  usage,
-  children,
-}: TokenPageProps) {
+export function TokenPage({ name, tagline, description, usage, children }: TokenPageProps) {
   return (
     <div className="px-8 py-12 max-w-4xl">
       <header className="mb-12">
         <div className="text-xs font-medium text-text-tertiary uppercase tracking-wider mb-2">
           Foundation
         </div>
-        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">
-          {name}
-        </h1>
+        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">{name}</h1>
         <p className="text-lg text-text-secondary mb-6">{tagline}</p>
         {description && (
-          <div className="text-sm text-text-secondary leading-relaxed">
-            {description}
-          </div>
+          <div className="text-sm text-text-secondary leading-relaxed">{description}</div>
         )}
         {usage && (
           <div className="mt-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-subtle border border-default font-mono text-xs">
@@ -52,7 +42,10 @@ export function TokenSection({
   description?: ReactNode;
   children: ReactNode;
 }) {
-  const id = title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const id = title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
   return (
     <section className="space-y-6 scroll-mt-20">
       <div>

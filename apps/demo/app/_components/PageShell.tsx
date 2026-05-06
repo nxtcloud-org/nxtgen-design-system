@@ -12,9 +12,7 @@ export function PageShell({
   className?: string;
 }) {
   return (
-    <div
-      className={`h-dvh bg-canvas text-text-primary flex flex-col overflow-hidden ${className}`}
-    >
+    <div className={`h-dvh bg-canvas text-text-primary flex flex-col overflow-hidden ${className}`}>
       {children}
     </div>
   );
@@ -29,10 +27,7 @@ export function PageScroll({
   className?: string;
 }) {
   return (
-    <main
-      id="doc-scroll"
-      className={`flex-1 min-h-0 overflow-y-auto ${className}`}
-    >
+    <main id="doc-scroll" className={`flex-1 min-h-0 overflow-y-auto ${className}`}>
       {children}
     </main>
   );
@@ -50,9 +45,7 @@ export function PageContent({
   width?: "default" | "wide";
 }) {
   return (
-    <div className={`flex-1 mx-auto px-6 py-12 w-full max-w-6xl ${className}`}>
-      {children}
-    </div>
+    <div className={`flex-1 mx-auto px-6 py-12 w-full max-w-6xl ${className}`}>{children}</div>
   );
 }
 
@@ -72,12 +65,8 @@ export function PageHero({
           {eyebrow}
         </div>
       )}
-      <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">
-        {title}
-      </h1>
-      {description && (
-        <p className="text-text-secondary max-w-2xl">{description}</p>
-      )}
+      <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">{title}</h1>
+      {description && <p className="text-text-secondary max-w-2xl">{description}</p>}
     </div>
   );
 }
