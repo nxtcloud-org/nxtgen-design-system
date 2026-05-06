@@ -13,6 +13,9 @@
 export * from "lucide-react";
 export type { LucideIcon, LucideProps } from "lucide-react";
 
+// Brand mark — gradient orbit + sparkle. Not currentColor (has its own grad).
+export { Logo, type LogoProps } from "./Logo";
+
 export const ICON_SIZE = {
   xs: 12,
   sm: 16,

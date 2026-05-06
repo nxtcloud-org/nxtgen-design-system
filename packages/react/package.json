@@ -1,6 +1,6 @@
 {
   "name": "@nxtgen-org/react",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "NxtGen React components",
   "type": "module",
   "repository": {

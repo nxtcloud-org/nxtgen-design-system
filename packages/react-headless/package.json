@@ -1,6 +1,6 @@
 {
   "name": "@nxtgen-org/react-headless",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "NxtGen — headless React primitives (behavior + a11y, no styles)",
   "type": "module",
   "repository": {
