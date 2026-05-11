@@ -1,6 +1,6 @@
 {
   "name": "@nxtgen-org/tokens",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "NxtGen design tokens — W3C DTCG → CSS / TS / Tailwind",
   "type": "module",
   "repository": {
@@ -26,7 +26,10 @@
     "./css/dark": "./dist/css/semantic-dark.css",
     "./tailwind": "./dist/tailwind/preset.cjs"
   },
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "node ./build.mjs",
     "dev": "node ./build.mjs --watch",

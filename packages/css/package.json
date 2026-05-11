@@ -1,6 +1,6 @@
 {
   "name": "@nxtgen-org/css",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "NxtGen global CSS — reset, fonts, theme",
   "type": "module",
   "repository": {
@@ -18,7 +18,9 @@
     "./fonts": "./src/fonts.css",
     "./base": "./src/base.css"
   },
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "scripts": {
     "type-check": "echo 'css package: no types'"
   },

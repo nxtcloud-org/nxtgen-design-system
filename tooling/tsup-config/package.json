@@ -1,6 +1,6 @@
 {
   "name": "@nxtgen-org/tsup-config",
-  "version": "0.0.0",
+  "version": "0.1.4",
   "private": true,
   "type": "module",
   "main": "./index.js",

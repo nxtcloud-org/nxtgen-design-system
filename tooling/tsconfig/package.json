@@ -1,6 +1,10 @@
 {
   "name": "@nxtgen-org/tsconfig",
-  "version": "0.0.0",
+  "version": "0.1.4",
   "private": true,
-  "files": ["base.json", "react-library.json", "next.json"]
+  "files": [
+    "base.json",
+    "react-library.json",
+    "next.json"
+  ]
 }
