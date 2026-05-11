@@ -33,9 +33,9 @@
     "on-brand": { "$value": "{color.gray.0}", "$type": "color" }
   },
   "border": {
-    "default": { "$value": "#FFFFFF12", "$type": "color", "$description": "alpha ~7% white" },
-    "subtle": { "$value": "#FFFFFF0A", "$type": "color", "$description": "alpha ~4% white" },
-    "strong": { "$value": "#FFFFFF1F", "$type": "color", "$description": "alpha ~12% white" },
+    "default": { "$value": "{color.gray.800}", "$type": "color", "$description": "dark surface 위의 차분한 outline. 이전 #FFFFFF12 alpha-white 는 검정 배경 위에서 발광 인상이 강해 눈 부담 (front-v2 user feedback 2026-05-11). gray.800 은 light 의 border.default(gray.200) 와 대칭 — bg.surface(gray.900) 한 단계 위 톤." },
+    "subtle": { "$value": "{color.gray.900}", "$type": "color", "$description": "거의 invisible separator. bg.surface 와 동일 톤이라 강조 없는 구분선용. light 의 border.subtle(gray.100) 대칭." },
+    "strong": { "$value": "{color.gray.700}", "$type": "color", "$description": "focus / hover 강조용. light 의 border.strong(gray.300) 대칭." },
     "focus": { "$value": "{color.blue.400}", "$type": "color" },
     "danger": { "$value": "{color.danger.400}", "$type": "color" }
   }
