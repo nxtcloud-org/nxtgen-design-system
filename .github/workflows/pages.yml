@@ -1,0 +1,73 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Pages 배포는 한 번에 하나만 — 진행 중인 게 있으면 큐잉(취소 X)해서 마지막 push까지 반영.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build static export
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.20
+
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Cache Turbo
+        uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: turbo-pages-${{ github.sha }}
+          restore-keys: |
+            turbo-pages-
+
+      - name: Install
+        run: bun install --frozen-lockfile
+
+      # turbo가 ^build 의존성을 따라 tokens → css → icons → react → demo 순서로 빌드.
+      # NEXT_PUBLIC_BASE_PATH는 next.config.mjs에서 basePath로 흡수돼 모든 자산/링크에 prefix.
+      - name: Build packages + demo
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: bun run build
+
+      # Pages가 _next 같이 언더스코어 시작 폴더를 Jekyll 처리로 무시하지 않게.
+      - name: Ensure .nojekyll
+        run: touch apps/demo/out/.nojekyll
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/demo/out
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
