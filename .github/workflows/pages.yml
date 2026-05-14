@@ -49,10 +49,11 @@ jobs:
         run: bun install --frozen-lockfile
 
       # turbo가 ^build 의존성을 따라 tokens → css → icons → react → demo 순서로 빌드.
-      # NEXT_PUBLIC_BASE_PATH는 next.config.mjs에서 basePath로 흡수돼 모든 자산/링크에 prefix.
+      # 커스텀 도메인(design.nxtgen.co.kr)에서 루트로 서빙되므로 basePath는 빈 값.
+      # 기존 *.github.io/<repo>/ URL은 커스텀 도메인으로 자동 301 리다이렉트되니까 OK.
       - name: Build packages + demo
         env:
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          NEXT_PUBLIC_BASE_PATH: ""
         run: bun run build
 
       # Pages가 _next 같이 언더스코어 시작 폴더를 Jekyll 처리로 무시하지 않게.
